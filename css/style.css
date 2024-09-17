@@ -1,0 +1,230 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+
+main {
+  flex-grow: 1;
+}
+
+section {
+  padding: 0 2rem;
+  margin: 5.3125rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 0.17px;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 1px;
+}
+section strong {
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.17px;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 1rem;
+}
+section p {
+  font-size: 0.9375rem;
+  text-align: center;
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+  letter-spacing: 0.1px;
+  line-height: 1.5625rem;
+  margin-bottom: 4.75rem;
+}
+
+.features {
+  margin-top: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+}
+.features .features__item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  border-top-left-radius: 10px 1%;
+  border-top-right-radius: 10px 1%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: white;
+}
+.features .features__item:first-child {
+  border-top: 3.55px solid hsl(180, 62%, 55%);
+}
+.features .features__item:last-child {
+  border-top: 3.55px solid hsl(212, 86%, 64%);
+}
+.features .features__item h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 1px;
+}
+.features .features__item p {
+  text-align: start;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.09px;
+  line-height: 1.4735rem;
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 2.0625rem;
+}
+.features .features__item img {
+  align-self: flex-end;
+}
+.features .features-items_container {
+  display: flex;
+  flex-direction: column;
+}
+.features .features-items_container .features__item:first-child {
+  border-top: 3.55px solid hsl(0, 78%, 62%);
+}
+.features .features-items_container .features__item:last-child {
+  border-top: 3.55px solid hsl(34, 97%, 64%);
+}
+
+footer {
+  padding: 7px;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    margin: 5rem 0;
+  }
+  section h1 {
+    font-size: 2.25rem;
+  }
+  section strong {
+    font-size: 2.25rem;
+  }
+  section p {
+    max-width: 33.75rem;
+    margin-bottom: 3.5625rem;
+  }
+  .features {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 68.75rem;
+    height: 33.125rem;
+    margin: 0 auto;
+  }
+  .features .features__item {
+    flex-basis: 21.875rem;
+    max-width: 21.875rem;
+    flex-grow: 1;
+    max-height: 250px;
+    filter: drop-shadow(0px 8px 10px hsla(213, 47%, 67%, 0.4));
+  }
+  .features .features__item h2 {
+    margin-top: 0.25rem;
+    margin-bottom: 6px;
+  }
+  .features .features-items_container {
+    flex-basis: 21.875rem;
+    max-width: 21.875rem;
+    gap: 2.8125rem;
+    max-height: 250px;
+    justify-content: center;
+  }
+  .features .features-items_container .features__item {
+    filter: drop-shadow(0px 8px 10px hsla(213, 47%, 67%, 0.3));
+  }
+  .features .features-items_container .features__item h2 {
+    margin-top: 0.25rem;
+    margin-bottom: 6px;
+  }
+}
